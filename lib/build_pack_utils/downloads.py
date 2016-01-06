@@ -40,6 +40,7 @@ class Downloader(object):
             url,
             toFile]
 
+        print "Stuff: %s" % (command_arguments)
         process = Popen(command_arguments, stdout=PIPE)
         exit_code = process.wait()
         translated_uri = process.stdout.read().rstrip()
